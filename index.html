@@ -13,6 +13,7 @@ layout: default
                 <li><a href="#footer" class="icon fa-info-circle">About</a></li>
             </ul>
         </nav>
+        <script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
     </header>
 
     <!-- Main -->
@@ -36,55 +37,10 @@ layout: default
             <div>
                 <section>
                     <h2>{{ site.footer.name }}</h2>
-                    <p>{{ site.footer.bio }}</p>
+                    <p>{{ site.footer.bio.part1 }}</p>
+                    <p>{{ site.footer.bio.part2 }}</p>
+                    <p>{{ site.footer.bio.part3 }}</p>
                     <p>{{ site.footer.github }}</p>
-                </section>
-                <section>
-                    <h2>Follow me on ...</h2>
-                    <ul class="icons">
-                        {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
                 </section>
                 <p class="copyright">
                     &copy; {{ site.year }} {{ site.author }}. Design: {{ site.web_design }}
@@ -92,8 +48,64 @@ layout: default
             </div>
             <div>
                 <section>
+                    <section>
+                        <h2>Follow me on ...</h2>
+                        <ul class="icons">
+                            {% if site.social_urls.facebook %}
+                                <li>
+                                    <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
+                                        <span class="label">Facebook</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.twitter %}
+                                <li>
+                                    <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
+                                        <span class="label">Twitter</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.instagram.nyc %}
+                                <li>
+                                    <a href="{{ site.social_urls.instagram.nyc }}" class="icon fa-instagram">
+                                        <span class="label">Instagram NYC</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.instagram.travel %}
+                                <li>
+                                    <a href="{{ site.social_urls.instagram.travel }}" class="icon fa-instagram">
+                                        <span class="label">Instagram Travel</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.dribbble %}
+                                <li>
+                                    <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
+                                        <span class="label">Dribbble</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.github %}
+                                <li>
+                                    <a href="{{ site.social_urls.github }}" class="icon fa-github">
+                                        <span class="label">GitHub</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if site.social_urls.linkedin %}
+                                <li>
+                                    <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
+                                        <span class="label">LinkedIn</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </section>
                     <h2>Get in touch</h2>
                     <form method="post" action="https://script.google.com/macros/s/AKfycbyubBNwB7XDth2C09q5knTKGkaaCH4FAuI4m_1qXjjgUXI_vmPx/exec">
+                        <label class="sr-only">Keep this field blank</label>
+                        <input id="honeypot" type="text" name="honeypot" value="" />
                         <div class="field half first">
                             <input type="text" name="name" id="name" placeholder="Name"/>
                         </div>
@@ -112,4 +124,5 @@ layout: default
             </div>
         </div>
     </footer>
+
 </div>

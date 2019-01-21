@@ -5,6 +5,9 @@
 ///
 
 /* Form */
+	#honeypot {
+		display: none; /*makes the field not visible to humans*/
+	}
 
 	form {
 		margin: 0 0 _size(element-margin) 0;
