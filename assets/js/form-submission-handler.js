@@ -9,7 +9,7 @@
       console.log("Robot Detected!");
       return true;
     } else {
-      console.log("Welcome Human!");
+    //   console.log("Welcome Human!");
     }
   }
 
@@ -55,7 +55,7 @@
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-    console.log(formData);
+    // console.log(formData);
     return formData;
   }
 
@@ -68,13 +68,14 @@
       return false;
     }
 
-    if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
-      var invalidEmail = form.querySelector(".email-invalid");
-      if (invalidEmail) {
-        invalidEmail.style.display = "block";
-        return false;
-      }
-    } else {
+    // Uncomment to use email validation
+    // if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
+    //   var invalidEmail = form.querySelector(".email-invalid");
+    //   if (invalidEmail) {
+    //     invalidEmail.style.display = "block";
+    //     return false;
+    //   }
+    // } else {
       disableAllButtons(form);
       var url = form.action;
       var xhr = new XMLHttpRequest();
@@ -82,8 +83,8 @@
       // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
-          console.log(xhr.status, xhr.statusText);
-          console.log(xhr.responseText);
+          console.log('Email Response: ', xhr.status, xhr.statusText);
+        //   console.log(xhr.responseText);
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
@@ -99,11 +100,11 @@
           return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
       }).join('&');
       xhr.send(encoded);
-    }
+    // } Uncomment if the above email validation if statement should be used
   }
   
   function loaded() {
-    console.log("Contact form submission handler loaded successfully.");
+    // console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form");
     for (var i = 0; i < forms.length; i++) {
