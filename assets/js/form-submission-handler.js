@@ -64,11 +64,9 @@
     var form = event.target;
     var data = getFormData(form);         // get the values submitted in the form
 
-    /* OPTION: Remove this comment to enable SPAM prevention, see README.md
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
       return false;
     }
-    */
 
     if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
       var invalidEmail = form.querySelector(".email-invalid");
@@ -107,7 +105,7 @@
   function loaded() {
     console.log("Contact form submission handler loaded successfully.");
     // bind to the submit event of our form
-    var forms = document.querySelectorAll("form.gform");
+    var forms = document.querySelectorAll("form");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
