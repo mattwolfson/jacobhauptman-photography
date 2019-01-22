@@ -85,13 +85,23 @@
       xhr.onreadystatechange = function() {
           console.log('Email Response: ', xhr.status, xhr.statusText);
         //   console.log(xhr.responseText);
-          var formElements = form.querySelector(".form-elements")
-          if (formElements) {
-            formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
+          var errorMessage = form.querySelector("#form_submission_error_message");
+          if (xhr.status === 200) {
+            var formElements = form.querySelector(".form-elements")
+            if (formElements) {
+              formElements.style.display = "none"; // hide form
+            }
+            if (errorMessage) {
+                errorMessage.style.display = "block";
+            }
+            var thankYouMessage = form.querySelector("#thankyou_message");
+            if (thankYouMessage) {
+              thankYouMessage.style.display = "block";
+            }
+          } else {
+            if (errorMessage) {
+                errorMessage.style.display = "block";
+            }
           }
           return;
       };
