@@ -12,7 +12,7 @@ layout: default
         </h1>
         <nav>
             <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About</a></li>
+                <li><a href="#footer" class="icon fa-info-circle">About Me, Shop, & Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -47,7 +47,6 @@ layout: default
                     <p>{{ site.footer.bio.part1 }}</p>
                     <p>{{ site.footer.bio.part2 }}</p>
                     <p>{{ site.footer.bio.part3 }}</p>
-                    <p>{{ site.footer.github }}</p>
                 </section>
                 <p class="copyright">
                     &copy; {{ site.year }} {{ site.author }}. Design: {{ site.web_design }}
@@ -60,21 +59,21 @@ layout: default
                         <ul class="icons">
                             {% if site.social_urls.facebook %}
                                 <li>
-                                    <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
+                                    <a href="{{ site.social_urls.facebook }}" target="_blank" class="icon fa-facebook">
                                         <span class="label">Facebook</span>
                                     </a>
                                 </li>
                             {% endif %}
                             {% if site.social_urls.twitter %}
                                 <li>
-                                    <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
+                                    <a href="{{ site.social_urls.twitter }}" target="_blank" class="icon fa-twitter">
                                         <span class="label">Twitter</span>
                                     </a>
                                 </li>
                             {% endif %}
                             {% if site.social_urls.instagram.nyc %}
                                 <li>
-                                    <a href="{{ site.social_urls.instagram.nyc }}" class="icon fa-instagram">
+                                    <a href="{{ site.social_urls.instagram.nyc }}" target="_blank" class="icon fa-instagram">
                                         <span class="label">Instagram NYC</span>
                                     </a>
                                     NYC
@@ -82,7 +81,7 @@ layout: default
                             {% endif %}
                             {% if site.social_urls.instagram.travel %}
                                 <li>
-                                    <a href="{{ site.social_urls.instagram.travel }}" class="icon fa-instagram">
+                                    <a href="{{ site.social_urls.instagram.travel }}" target="_blank" class="icon fa-instagram">
                                         <span class="label">Instagram Travel</span>
                                     </a>
                                     Travel
@@ -90,21 +89,21 @@ layout: default
                             {% endif %}
                             {% if site.social_urls.dribbble %}
                                 <li>
-                                    <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
+                                    <a href="{{ site.social_urls.dribbble }}" target="_blank" class="icon fa-dribbble">
                                         <span class="label">Dribbble</span>
                                     </a>
                                 </li>
                             {% endif %}
                             {% if site.social_urls.github %}
                                 <li>
-                                    <a href="{{ site.social_urls.github }}" class="icon fa-github">
+                                    <a href="{{ site.social_urls.github }}" target="_blank" class="icon fa-github">
                                         <span class="label">GitHub</span>
                                     </a>
                                 </li>
                             {% endif %}
                             {% if site.social_urls.linkedin %}
                                 <li>
-                                    <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
+                                    <a href="{{ site.social_urls.linkedin }}" target="_blank" class="icon fa-linkedin">
                                         <span class="label">LinkedIn</span>
                                     </a>
                                 </li>
@@ -135,6 +134,10 @@ layout: default
                     <p id="form_submission_error_message">
                         Sorry! There was an issue sending your message. Please try again in a bit.
                     </p>
+                    <section>
+                        <h2>Shop</h2>
+                        <p> {{ site.footer.shop }} </p>
+                    </section>
                 </section>
             </div>
         </div>
