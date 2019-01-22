@@ -9,6 +9,16 @@
 		display: none; /*makes the field not visible to humans*/
 	}
 
+	#bio-pictures-container {
+		display: flex;
+		justify-content: space-evenly;
+		width: 400px;
+	}
+
+	.bio-picture {
+		width: 160px;
+	}
+
 	.thankyou_message {
 		display: none;
 		color: #47c5ab;
