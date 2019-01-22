@@ -11,8 +11,10 @@
 
 	#bio-pictures-container {
 		display: flex;
-		justify-content: space-evenly;
-		width: 400px;
+		justify-content: space-between;
+		height: 120px;
+		margin-bottom: 20px;
+		width: 350px;
 	}
 
 	.bio-picture {
