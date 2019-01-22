@@ -21,14 +21,15 @@
 		width: 160px;
 	}
 
-	.thankyou_message {
-		display: none;
+	#form_submission_thankyou_message {
 		color: #47c5ab;
+		display: none;
 	}
 
-	.form_submission_error_message {
-		display: none;
+	#form_submission_error_message {
 		color: red;
+		display: none;
+		font-weight: bold;
 	}
 
 	form {

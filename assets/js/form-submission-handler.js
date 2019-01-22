@@ -85,16 +85,16 @@
       xhr.onreadystatechange = function() {
           console.log('Email Response: ', xhr.status, xhr.statusText);
         //   console.log(xhr.responseText);
-          var errorMessage = form.querySelector(".form_submission_error_message");
+          var errorMessage = document.querySelector("#form_submission_error_message");
           if (xhr.status === 200) {
-            var formElements = form.querySelector(".form-element")
+            var formElements = document.querySelector("#form-contact")
             if (formElements) {
               formElements.style.display = "none"; // hide form
             }
             if (errorMessage) {
                 errorMessage.style.display = "block";
             }
-            var thankYouMessage = form.querySelector(".thankyou_message");
+            var thankYouMessage = document.querySelector("#thankyou_message");
             if (thankYouMessage) {
               thankYouMessage.style.display = "block";
             }
